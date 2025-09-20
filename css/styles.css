@@ -10,8 +10,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background: whitesmoke;
   min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  background-blend-mode: overlay;
 }
 
 .container {
@@ -41,6 +43,7 @@ body {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 0.3s ease;
 }
 .container .card .content {
   position: absolute;
@@ -104,4 +107,9 @@ body {
 .container .card:hover .sci li {
   transform: translateY(0px);
   opacity: 1;
+}
+.container .card:hover img {
+  filter: contrast(120%) saturate(150%);
+  transform: rotate(-3deg) scale(1.05);
+  transition-delay: 0.3s;
 }/*# sourceMappingURL=styles.css.map */
